@@ -1,0 +1,9 @@
+.code16
+
+. = 0xe8000
+  mov  $0x41, %al
+  outb %al, $0x11
+  hlt
+  
+. = 0xffff0
+  jmpl $0xe800, $0x0000
